@@ -1,0 +1,72 @@
+.App {
+  text-align: center;
+  padding: 2.5% 15% 2.5% 15%;
+  background: #141414;
+  color: white;
+  height: 100vh;
+}
+
+.searchForm {
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.search-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.image-container {
+  position: relative;
+  transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.image-container:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.image-container:hover .overlay {
+  opacity: 1;
+}
+
+.overlay {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  transition: 0.5s ease;
+  opacity: 0;
+  bottom: 40px;
+  font-size: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+.item-name {
+  font-size: 0.8rem;
+}
+
+.thumbnail {
+
+  border-radius: 5px;
+  margin: 20px;
+  max-width: 100px;
+}
+
+.btn {
+  margin-top: 20px;
+}
+
+.favouriteHeading {
+  font-size: 1.2rem;
+  margin: 20px;
+}
+
+.heading {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
