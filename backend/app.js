@@ -5,6 +5,7 @@ const helmet = require("helmet");
 const fetch = require("isomorphic-fetch");
 const bodyParser = require("body-parser");
 const app = express();
+const path = require('path');
 
 //Using body parser to get data from the body of the HTTP request
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -34,7 +35,7 @@ app.post("/api", (req, res) => {
     .catch((err) => console.log(err));
 });
 
-//Below allows Express to serve up resources from React in production
+// Below allows Express to serve up resources from React in production
 if (process.env.NODE_ENV === 'production'){
   app.use(express.static(path.join(__dirname, 'frontend/build')));
   app.get('*',(req,res)=> {res.sendFile(path.resolve(__dirname,
