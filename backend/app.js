@@ -34,7 +34,7 @@ app.post("/api", (req, res) => {
     .catch((err) => console.log(err));
 });
 
-Below allows Express to serve up resources from React in production
+// Below allows Express to serve up resources from React in production
 if (process.env.NODE_ENV === 'production'){
   app.use(express.static(path.join(__dirname, 'frontend/build')));
   app.get('*',(req,res)=> {res.sendFile(path.resolve(__dirname,
