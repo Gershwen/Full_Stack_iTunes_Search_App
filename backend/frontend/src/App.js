@@ -51,7 +51,6 @@ class App extends React.Component {
     })
       .then((res) => res.json())
       .then((result) => {
-        console.log(result.results);
         this.setState({
           data: result.results,
         });

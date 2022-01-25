@@ -8,7 +8,7 @@ const Media = (props) => {
     <div>
       <div className="search-container">
         {props.data.map((item, index) => (
-          <div className="image-container">
+          <div key={item.trackId} className="image-container">
             <img
               className="thumbnail"
               src={item.artworkUrl100}
