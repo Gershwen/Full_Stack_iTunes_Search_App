@@ -5,6 +5,7 @@ const helmet = require("helmet");
 const fetch = require("isomorphic-fetch");
 const bodyParser = require("body-parser");
 const app = express();
+const path = require('path');
 
 //Using body parser to get data from the body of the HTTP request
 app.use(bodyParser.urlencoded({ extended: true }));
