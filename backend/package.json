@@ -2,10 +2,10 @@
   "name": "task21fetchexample",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "./app.js",
   "scripts": {
     "test": "mocha",
-    "start":"app.js"
+    "start":"./app.js"
   },
   "keywords": [],
   "author": "",
