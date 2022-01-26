@@ -5,10 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "mocha",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm run install --prefix frontend && npm run build --prefix frontend",
-    "server": "nodemon app.js",
-    "develop": "concurrently --kill-others-on-fail \"npm run server\" \"npm run start --prefix frontend\"",
-    "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run start --prefix frontend\""
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=true npm run install --prefix frontend && npm run build --prefix frontend",
+    "start": "nodemon app.js"
   },
   "keywords": [],
   "author": "",
