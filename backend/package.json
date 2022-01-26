@@ -5,8 +5,6 @@
   "main": "app.js",
   "scripts": {
     "test": "mocha",
-    "build": "cd frontend && npm run build",
-    "install-client": "cd frontend && npm install",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm run install --prefix frontend && npm run build --prefix frontend",
     "server": "nodemon app.js",
     "develop": "concurrently --kill-others-on-fail \"npm run server\" \"npm run start --prefix frontend\"",
