@@ -5,8 +5,9 @@
   "main": "app.js",
   "scripts": {
     "test": "mocha",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm run install --prefix frontend && npm run build --prefix frontend",
-    "start": "nodemon app.js"
+    "start": "app.js",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm run install --prefix frontend && npm run build --prefix frontend"
+    
   },
   "keywords": [],
   "author": "",
