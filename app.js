@@ -5,7 +5,7 @@ const helmet = require("helmet");
 const fetch = require("isomorphic-fetch");
 const bodyParser = require("body-parser");
 const app = express();
-const path = require('path');
+const path = require("path");
 const cors = require("cors");
 
 //Using body parser to get data from the body of the HTTP request
@@ -38,14 +38,12 @@ app.post("/api", (req, res) => {
 });
 
 // Below allows Express to serve up resources from React in production
-if (process.env.NODE_ENV === 'production'){
-  app.use(express.static(path.join(__dirname, 'frontend/build')));
-  app.get('*',(req,res)=> {res.sendFile(path.resolve(__dirname,
-  'frontend', 'build','index.html'));
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "frontend", "build")));
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "frontend", "build", "index.html"));
   });
-  }
-
-
+}
 
 // Get port from environment and store in Express.
 const PORT = process.env.PORT || 3001;
