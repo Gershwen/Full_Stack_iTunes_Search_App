@@ -39,42 +39,24 @@ class App extends React.Component {
     //prevent default of refreshing the page
     e.preventDefault();
 
-  //   fetch("/api", {
-  //     method: "POST",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //     },
-  //     body: JSON.stringify({
-  //       search: this.state.searchValue,
-  //       select: this.state.selectValue,
-  //     }),
-  //   })
-  //     .then((res) => res.json())
-  //     .then((result) => {
-  //       this.setState({
-  //         data: result.results,
-  //       });
-  //     })
-  //     .catch((error) => console.log("Error:", error));
-  // }
-  fetch("http://localhost:3001/api", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      search: this.state.searchValue,
-      select: this.state.selectValue,
-    }),
-  })
-    .then((res) => res.json())
-    .then((result) => {
-      this.setState({
-        data: result.results,
-      });
+    fetch("/api", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        search: this.state.searchValue,
+        select: this.state.selectValue,
+      }),
     })
-    .catch((error) => console.log("Error:", error));
-}
+      .then((res) => res.json())
+      .then((result) => {
+        this.setState({
+          data: result.results,
+        });
+      })
+      .catch((error) => console.log("Error:", error));
+  }
 
 
   //Below function handles the add to favourites button
