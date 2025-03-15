@@ -6,7 +6,7 @@
   "scripts": {
     "test": "mocha",
   "start": "node app.js",
-  "heroku-postbuild": "cd frontend && npm install --only=dev && npm install && npm run build && cd .."
+   "build": "cd frontend && npm install && npm run build"
   },
   "keywords": [],
   "author": "",
