@@ -20,13 +20,15 @@ app.use(
     contentSecurityPolicy: {
       directives: {
         defaultSrc: ["'self'"],
+        scriptSrc: ["'self'", "https://cdn.jsdelivr.net"],
+        styleSrc: ["'self'", "https://cdn.jsdelivr.net"],
         imgSrc: ["'self'", "data:", "https://is1-ssl.mzstatic.com"],
+        fontSrc: ["'self'", "https://cdn.jsdelivr.net"],
       },
     },
   })
 );
 
-// app.use(helmet());
 app.use(cors());
 
 
