@@ -15,7 +15,18 @@ const __dirname = dirname(__filename);
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use(helmet());
+app.use(
+  helmet({
+    contentSecurityPolicy: {
+      directives: {
+        defaultSrc: ["'self'"],
+        imgSrc: ["'self'", "data:", "https://is1-ssl.mzstatic.com"],
+      },
+    },
+  })
+);
+
+// app.use(helmet());
 app.use(cors());
 
 
